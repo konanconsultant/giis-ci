@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Consultance - Expert en SIG & Développement</title>
+    <title>Consultance - Suivi-Évaluation projet et programme, Enquête et sondage, Systèmes d'Information Géographique</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -911,6 +911,32 @@
             font-size: 0.95rem;
         }
 
+        /* Notifications */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 280px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.success { background: #28a745; }
+.notification.error { background: #dc3545; }
+
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1109,7 +1135,7 @@
                 <li><a href="#home" class="nav-link active">Accueil</a></li>
                 <li><a href="#about" class="nav-link">A Propos</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="mobile-menu" id="mobile-menu">
@@ -1123,8 +1149,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Expertise en SIG &<br><span>Développement Durable</span></h1>
-            <p>Consultant spécialisé en Systèmes d'Information Géographique, enquêtes terrain et conseil stratégique pour transformer vos données en impact concret.</p>
+            <h1>Suivi-Évaluation de <br><span>Projet et programme</span></h1>
+            <p>Votre partenaire de confiance pour collecter, analyser et comprendre vos données. Que vous soyez une petite entreprise ou une grande entreprise, notre service est adapté à vos besoins.</p>
             <div class="cta-buttons">
                 <a href="#services" class="btn btn-primary">
                     <i class="fas fa-leaf"></i> Mes Services
@@ -1142,22 +1168,23 @@
             <h2 class="section-title fade-in-up">A <span>Propos</span></h2>
             <div class="about-content">
                 <div class="about-text fade-in-left">
-                    <h3>Consultant Expert en SIG et Développement</h3>
-                    <p>Avec plus de 3 ans d'expérience dans des projets internationaux financés par la GIZ et l'ANSTAT, je suis spécialisé en Systèmes d'Information Géographique (SIG), enquêtes terrain et conseil stratégique en Afrique de l'Ouest.</p>
-                    <p>Ma mission est de transformer les données brutes en solutions concrètes pour le développement durable, l'aménagement du territoire et la prise de décision stratégique.</p>
+                    <h3>Transformez vos données en décisions</h3>
+                    <p>Consultant spécialisé dans la collecte et l’analyse de données, les enquêtes de terrain et les Systèmes d’Information Géographique (SIG)</p>
+
+                    <p>Mon objectif est d’aider les organisations à transformer leurs données en décisions éclairées et en impacts concrets, tout en renforçant la redevabilité et l’apprentissage de leurs projets..</p>
                     <div class="skills">
                         <span class="skill-tag">SIG & Cartographie</span>
-                        <span class="skill-tag">Enquêtes Terrain</span>
+                        <span class="skill-tag">Enquête et Sondage</span>
                         <span class="skill-tag">Suivi-Évaluation</span>
                         <span class="skill-tag">QGIS & KoboToolbox</span>
-                        <span class="skill-tag">Conseil Stratégique</span>
-                        <span class="skill-tag">Développement Web</span>
+                        <span class="skill-tag">Assistance et Conseils</span>
+                        <span class="skill-tag">Formation</span>
                     </div>
                 </div>
                <div class="about-image fade-in-right">
   <div>
     <i class="fas fa-layer-group"></i>
-    <h4>Votre Partenaire en Données Spatiales</h4>
+    <h4>Votre Partenaire en Suivi-Évaluation de projet et programme</h4>
   </div>
 </div>
 
@@ -1236,10 +1263,10 @@
 
 
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <!-- Projets Section -->
+    <section id="projets" class="projets section">
         <div class="section-padding">
-            <h2 class="section-title fade-in-up">Portfolio de <span>Projets</span></h2>
+            <h2 class="section-title fade-in-up">Mes <span>Projets</span></h2>
             <div class="projects-grid">
                 <div class="project-card fade-in-up">
                     <div class="project-header">
@@ -1247,7 +1274,7 @@
                         <div class="project-title">GIZ - DigiGreen & Agri</div>
                     </div>
                     <div class="project-content">
-                        <div class="project-mission">Innovation numérique pour la transition verte</div>
+                        <div class="project-mission">Projet : DigiGreen & Agri « L’innovation numérique au service de la transition verte, de l’entrepreneuriat et de l’employabilité des jeunes »</div>
                         <div class="project-description">Enquête pour identifier les offres, expertises et besoins des centres de recherche et des universités, et cartographier les entreprises impliquées dans des démarches RSE.</div>
                     </div>
                 </div>
@@ -1258,8 +1285,8 @@
                         <div class="project-title">ANSTAT - RGEECI</div>
                     </div>
                     <div class="project-content">
-                        <div class="project-mission">Contrôle qualité recensement entreprises</div>
-                        <div class="project-description">Contrôle qualité des données du Recensement Général des Entreprises et Établissements de Côte d'Ivoire.</div>
+                        <div class="project-mission">Projet : Recensement général des Entreprises et Établissements de Côte d’Ivoire (RGEECI)</div>
+                        <div class="project-description">Contrôle qualité des données collectées lors du Recensement Général des Entreprises et Établissements de Côte d'Ivoire.</div>
                     </div>
                 </div>
 
@@ -1269,7 +1296,7 @@
                         <div class="project-title">GIZ - État de Droit</div>
                     </div>
                     <div class="project-content">
-                        <div class="project-mission">Enquête satisfaction services juridiques</div>
+                        <div class="project-mission">Projet : Promotion de l'état de droit et de justice en Afrique </div>
                         <div class="project-description">Enquête de satisfaction des bénéficiaires sur la qualité des services juridiques offerts aux personnes vulnérables.</div>
                     </div>
                 </div>
@@ -1280,8 +1307,8 @@
                         <div class="project-title">ANSTAT - IAI</div>
                     </div>
                     <div class="project-content">
-                        <div class="project-mission">Évaluation accessibilité infrastructures</div>
-                        <div class="project-description">Contribution à l'évaluation de l'accès aux infrastructures de base en mesurant les distances, temps de trajet et modes de transport disponibles.</div>
+                        <div class="project-mission">Projet : Etude pour la mise en place d'un indice d'accessibilité et d'isolement (IAI) aux infrastructures de base.</div>
+                        <div class="project-description">Evaluation de l'accès aux infrastructures de base en mesurant les distances, temps de trajet et modes de transport disponibles.</div>
                     </div>
                 </div>
             </div>
@@ -1387,6 +1414,45 @@
   </div>
 </section>
 
+<!-- EmailJS -->
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("ZFdvHNITa0qdiIRdQ"); // Clé publique
+  })();
+
+  function showNotification(message, type) {
+    const notif = document.getElementById('notification');
+    notif.textContent = message;
+    notif.className = `notification show ${type}`;
+    setTimeout(() => {
+      notif.className = "notification";
+    }, 4000);
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    submitBtn.disabled = true;
+
+    emailjs.sendForm('service_eqvcdrp', 'template_9ak3k4h', this)
+      .then(() => {
+        showNotification("✅ Message envoyé avec succès !", "success");
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, () => {
+        showNotification("❌ Erreur lors de l'envoi. Veuillez réessayer.", "error");
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
+  });
+</script>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1395,78 +1461,58 @@
             <div class="contact-content">
                 <div class="contact-info fade-in-left">
                     <h3>Discutons de votre projet</h3>
-                    <p>Que vous ayez besoin d'une cartographie précise, d'une enquête terrain ou d'une formation SIG, je suis là pour vous accompagner dans vos projets de développement.</p>
+                    <p>Que vous ayez besoin d'une enquête terrain, d'une cartographie précise, ou d'une formation SIG, je suis là pour vous accompagner dans vos projets de développement.</p>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <strong>Email</strong>
-                            <p>contact@consultance-expert.fr</p>
+                            <p>infos.giis@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Téléphone</strong>
-                            <p>+225 00 00 00 00</p>
+                            <p>+225 07 68 44 13 56</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <strong>LinkedIn</strong>
-                            <p>linkedin.com/in/votre-profil</p>
+                            <p>linkedin.com</p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form fade-in-right">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <input type="text" id="subject" name="subject" placeholder="SIG, Cartographie, Enquête..." required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Dites-moi en plus sur votre projet de cartographie ou d'enquête..." rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
-                            <i class="fas fa-paper-plane"></i> Envoyer le Message
-                        </button>
-                    </form>
+                <form id="contactForm">
+    <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="user_name" placeholder="Votre nom complet" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="user_email" placeholder="votre@email.com" required>
+    </div>
+    <div class="form-group">
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" placeholder="SIG, Cartographie, Enquête..." required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Dites-moi en plus sur votre projet..." rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+        <i class="fas fa-paper-plane"></i> Envoyer le Message
+    </button>
+</form>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="section-padding">
-            <p>&copy; 2025 Portfolio Consultance. Tous droits réservés. | Spécialiste SIG & Développement Durable</p>
-        </div>
-    </footer>
-
-    <!-- Footer -->
-<footer class="footer">
-  <div class="section-padding">
-    <p>&copy; 2025 Portfolio Consultance. Tous droits réservés. | Spécialiste SIG & Développement Durable</p>
-    <p><a href="#mentions" style="color: var(--primary-color);">Mentions légales</a> | <a href="#confidentialite" style="color: var(--primary-color);">Politique de confidentialité</a></p>
-  </div>
-</footer>
 
 <!-- Mentions légales Section -->
-<section id="mentions" class="section" style="background:#f9f9f9;">
-  <div class="section-padding">
-    <h2 class="section-title fade-in-up">Mentions <span>Légales</span></h2>
-    <p>Ce site est édité par [Ton Nom / Entreprise]. Hébergement par [Nom Hébergeur].</p>
-  </div>
-</section>
 
 <!-- Politique de confidentialité Section -->
 <section id="confidentialite" class="section" style="background:#f9f9f9;">
@@ -1476,7 +1522,15 @@
   </div>
 </section>
 
-    
+   <!-- Footer -->
+<footer class="footer">
+  <div class="section-padding">
+    <p>&copy; 2025 GIIS. Tous droits réservés</p>
+    <p><a href="#mentions" style="color: var(--primary-color);">Mentions légales</a> | <a href="#confidentialite" style="color: var(--primary-color);">Politique de confidentialité</a></p>
+  </div>
+</footer>
+
+
     <script>
         // Loading Screen
         window.addEventListener('load', () => {
@@ -1737,5 +1791,8 @@
             }
         });
     </script>
+    <!-- Notifications -->
+<div id="notification" class="notification"></div>
+
 </body>
 </html>
